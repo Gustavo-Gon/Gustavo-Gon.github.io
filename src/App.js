@@ -37,7 +37,7 @@ const Home = () => {
 
       <div className="about-me-section" id="about-me">
         <div className="profile-pic">
-          <img src="/images/Gus1.jpg" alt="Your Name" />
+          <img src="/portfolio/images/Gus1.jpg" alt="Your Name" />
         </div>
         <div className="about-text">
           <h2>About Me</h2>
@@ -50,14 +50,14 @@ const Home = () => {
       <div className="projects-section" id="projects">
         <h1 className="myPro">My Projects</h1>
         <div className="icons">
-          <img src='/images/c-.png' alt='C++'></img>
-          <img src='/images/java.png' alt='Java'></img>
-          <img src='/images/python.png' alt='Python'></img>
-          <img src='/logo192.png' alt='React'></img>
-          <img src='/images/css-3.png' alt='HTML'></img>
-          <img src='/images/html-5.png' alt='CSS'></img>
-          <img src='/images/js.png' alt='JavaScript'></img>
-          <img src='/images/php.png' alt='PHP'></img>
+          <img src='/portfolio/images/c-.png' alt='C++'></img>
+          <img src='/portfolio/images/java.png' alt='Java'></img>
+          <img src='/portfolio/images/python.png' alt='Python'></img>
+          <img src='/portfolio/logo192.png' alt='React'></img>
+          <img src='/portfolio/images/css-3.png' alt='HTML'></img>
+          <img src='/portfolio/images/html-5.png' alt='CSS'></img>
+          <img src='/portfolio/images/js.png' alt='JavaScript'></img>
+          <img src='/portfolio/images/php.png' alt='PHP'></img>
         </div>
 
         <div className="projects">
@@ -76,7 +76,7 @@ const Home = () => {
             {plSectionExpanded && (
               <>
                 <p>Facial Recognition using C++ and openCV.</p>
-                <img src="/images/FaceReg.png" alt="face" className="face" />
+                <img src="/portfolio/images/FaceReg.png" alt="face" className="face" />
 
               </>
               )}
@@ -86,7 +86,7 @@ const Home = () => {
             {appsSectionExpanded && (
               <>
                 <p>App development using Xcode and Android Studio.</p>
-                <video src="/images/AppVid.mp4" alt="app" className="project-video" autoPlay></video>
+                <video src="/portfolio/images/AppVid.mp4" alt="app" className="project-video" autoPlay></video>
 
 
               </>
@@ -103,11 +103,11 @@ const Home = () => {
         <p>Feel free to get in touch with me through the following means:</p>
         <div className="social-icons-container">
           <a href="https://github.com/Gustavo-Gon" target="_blank" className="social-icon">
-          <img src="/images/githublogo.png" alt='github' className='social-icon'></img>
+          <img src="/portfolio/images/githublogo.png" alt='github' className='social-icon'></img>
         </a>
 
         <a href="https://www.linkedin.com/in/gustavo-gonzalez-218148296/" target="_blank" className="social-icon">
-        <img src="/images/inlogo.png" alt='linkedin' className='social-icon'></img>
+        <img src="/portfolio/images/inlogo.png" alt='linkedin' className='social-icon'></img>
         </a>
       </div>
 
