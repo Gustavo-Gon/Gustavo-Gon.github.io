@@ -25,7 +25,7 @@ const Home = () => {
         <div className="bg-text">
           <Header />
         </div>
-        <img src="/images/mountain.jpeg" alt="Background" />
+        <img src="/portfolio/images/mountain.jpeg" alt="Background" />
       </div>
 
       <div className="navbar">
