@@ -76,7 +76,7 @@ body {
 .about-me-section {
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 20%;
     background-color: aliceblue;
 }
 
@@ -98,13 +98,32 @@ body {
 /* Projects Section */
 .projects-section {
     padding: 20px 10%;
-    background-color: #333;
+    background: linear-gradient(135deg, #333, #555);
+    /* You can adjust the angle and colors as needed */
+    color: white; /* Set text color to contrast the background */
+    padding: 20px; /* Adjust padding as needed */
 }
 
 .project {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.myPro {
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.icons img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
 }
 
 .project img {
@@ -302,73 +321,4 @@ body {
     max-width: 220px;    /* Limit the maximum width */
     object-fit: cover;   /* Scale the video to cover the element's entire content box */
     border-radius: 5px;  /* Optional: If you want rounded corners */
-}
-
-
-
-/* Mobile */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Decrease the base font size */
-    }
-
-    /* Navbar Styles */
-    .navbar {
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .navbar a {
-        padding: 10px;
-    }
-
-    /* Background Image Section */
-    .bg-text h1 {
-        font-size: 2.5em; /* Reduce font size */
-    }
-
-    .bg-text p {
-        font-size: 1.5em; /* Reduce font size */
-    }
-
-    /* Projects Section */
-    .project img,
-    .project.project-reverse img {
-        width: 80%;
-        margin: 0 auto; /* Center align images */
-    }
-
-    /* Contact Section */
-    .social-icon {
-        margin: 10px;
-        font-size: 32px; /* Increase icon size */
-    }
-
-    #email-display {
-        font-size: 16px; /* Adjust email display font size */
-    }
-}
-
-/* Additional Styles for Smaller Screens (e.g., for phones) */
-@media (max-width: 480px) {
-    /* Further reduce font sizes, margins, padding, etc. as needed */
-    body {
-        font-size: 14px;
-    }
-
-    .bg-text h1 {
-        font-size: 2em;
-    }
-
-    .bg-text p {
-        font-size: 1.2em;
-    }
-
-    .project img,
-    .project.project-reverse img {
-        width: 90%;
-    }
-
-    /* You can add more specific styles for very small screens here */
 }

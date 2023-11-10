@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles.css'; // Import your CSS file here
-import IconList from './IconList';
 
 const Home = () => (
   <div>
@@ -31,27 +30,22 @@ const Home = () => (
           I'm a dedicated Computer Science student from Bellevue College with a passion for software and mobile application development. My academic journey is coupled with hands-on experience, having collaborated on Agile teams to create innovative Android/iOS applications. Beyond the classroom and development environment, I've honed my skills in customer-centric roles, blending technical expertise with effective communication. Always eager to embrace new challenges, I'm driven by a relentless pursuit of technological excellence and continuous learning.
         </p>
       </div>
-
-      <div className="resume-button-container">
-        <button className="resume-button">View Resume</button>
-      </div>
-
-      {/* Resume Modal */}
-      <div id="resumeModal" className="modal">
-        <div className="modal-content">
-          <span className="close" onClick={closeResumeModal}>&times;</span>
-          <iframe src="/images/GusGonCSResume.pdf" width="100%" height="500px" title="Resume"></iframe>
-          <a href="/images/GusGonCSResume.pdf" download className="download-link">Download Resume</a>
-        </div>
-      </div>
     </div>
 
     {/* Projects Section */}
     <div className="projects-section" id="projects">
-      <h2>My Projects</h2>
-      <IconList />
-
-
+      <h2 className="myPro">My Projects</h2>
+        <div className="icons">
+          <img src='/images/c-.png' alt='C++'></img>
+          <img src='/images/java.png' alt='Java'></img>
+          <img src='/images/python.png' alt='Python'></img>
+          <img src='/logo192.png' alt='React'></img>
+          <img src='/images/css-3.png' alt='HTML'></img>
+          <img src='/images/html-5.png' alt='CSS'></img>
+          <img src='/images/js.png' alt='JavaScript'></img>
+          <img src='/images/php.png' alt='PHP'></img>
+        </div>
+        
       {/* Sample project */}
       <div className="project project-reverse">
         <video className="project-video" autoPlay loop muted playsInline>
@@ -116,13 +110,6 @@ const Header = () => (
     <p>Software Engineer | Web/Mobile Developer</p>
   </header>
 );
-
-const closeResumeModal = () => {
-  const resumeModal = document.getElementById('resumeModal');
-  if (resumeModal) {
-    resumeModal.style.display = 'none';
-  }
-};
 
 const App = () => (
   <div>
