@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css'; // Import your CSS file here
+import IconList from './IconList';
 
 const Home = () => (
   <div>
@@ -39,8 +40,8 @@ const Home = () => (
       <div id="resumeModal" className="modal">
         <div className="modal-content">
           <span className="close" onClick={closeResumeModal}>&times;</span>
-          <iframe src="images/GusGonCSResume.pdf" width="100%" height="500px" title="Resume"></iframe>
-          <a href="images/GusGonCSResume.pdf" download className="download-link">Download Resume</a>
+          <iframe src="/images/GusGonCSResume.pdf" width="100%" height="500px" title="Resume"></iframe>
+          <a href="/images/GusGonCSResume.pdf" download className="download-link">Download Resume</a>
         </div>
       </div>
     </div>
@@ -48,6 +49,8 @@ const Home = () => (
     {/* Projects Section */}
     <div className="projects-section" id="projects">
       <h2>My Projects</h2>
+      <IconList />
+
 
       {/* Sample project */}
       <div className="project project-reverse">
@@ -115,7 +118,10 @@ const Header = () => (
 );
 
 const closeResumeModal = () => {
-  document.getElementById('resumeModal').style.display = 'none';
+  const resumeModal = document.getElementById('resumeModal');
+  if (resumeModal) {
+    resumeModal.style.display = 'none';
+  }
 };
 
 const App = () => (
