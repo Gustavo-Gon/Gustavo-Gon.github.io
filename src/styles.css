@@ -102,13 +102,9 @@ body {
     /* You can adjust the angle and colors as needed */
     color: white; /* Set text color to contrast the background */
     padding: 20px; /* Adjust padding as needed */
-}
 
-.project {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
+  }
+  
 
 .myPro {
     text-align: center;
@@ -126,33 +122,22 @@ body {
     margin-right: 10px;
 }
 
-.project img {
-    width: 100%;
-    max-width: 300px;
-    margin-right: 20px;
+.projects {
+    display: flex;
 }
 
-.project .project-details {
-    flex-grow: 1;
-}
-
-.project .project-details h3 {
-    font-size: 1.8em; 
-    margin: 0 0 10px;
-    color: #333;
-}
-
-.project .project-details p {
-    margin: 0;
-}
-
-.project.project-reverse {
-    flex-direction: row-reverse; 
-}
-
-.project.project-reverse img {
-    margin-left: 20px;
-    margin-right: 0;
+.web,
+.pl,
+.apps {
+    text-align: center;
+    flex: 30%; /* Set each section to take up 30% of the container width */
+    margin-top: 20px;
+    background-color: #333;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 300px;
+    border-radius: 15px;
 }
 
 /* Contact Section */

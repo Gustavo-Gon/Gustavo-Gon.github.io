@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css'; // Import your CSS file here
 
 const Home = () => (
-  <div>
+  <div className="over">
     {/* Large background photo */}
     <div className="large-bg" id="home">
       <div className="bg-text">
@@ -34,7 +34,7 @@ const Home = () => (
 
     {/* Projects Section */}
     <div className="projects-section" id="projects">
-      <h2 className="myPro">My Projects</h2>
+      <h1 className="myPro">My Projects</h1>
         <div className="icons">
           <img src='/images/c-.png' alt='C++'></img>
           <img src='/images/java.png' alt='Java'></img>
@@ -45,35 +45,26 @@ const Home = () => (
           <img src='/images/js.png' alt='JavaScript'></img>
           <img src='/images/php.png' alt='PHP'></img>
         </div>
-        
-      {/* Sample project */}
-      <div className="project project-reverse">
-        <video className="project-video" autoPlay loop muted playsInline>
-          <source src="images/AppVid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="project-description">
-          <h3>MeCard - Personal Profile App</h3>
-          <p>
-            MeCard is a sleek iOS application designed to highlight professional profiles. Built using SwiftUI, it offers a user-friendly interface showcasing a profile picture and expandable sections detailing Introduction, Experience, and Additional Skills. The intuitive dropdown navigation allows users to seamlessly transition between the main views, ensuring that every aspect of a user's profile is easily accessible. With its modern design and smooth animations, MeCard serves as a digital business card, perfect for professionals seeking a polished, digital presence on iOS.
-          </p>
-        </div>
-      </div>
 
-      {/* Another Sample project */}
-      <div className="project">
-        <img src="images/FaceReg.png" alt="Another Personal App" />
-        <div className="project-description">
-          <h3>Real-Time Facial Recognition System</h3>
-          <p>
-            Overview: Developed a real-time facial recognition application using OpenCV in C++.<br />
-            Key Features:<br />
-            {/* Add project details here */}
-          </p>
-        </div>
-      </div>
+        <div className="projects">
+          <div className="web">
+            <h2>Web Frameworks</h2>
+            <p>View my projects utilizing AWS, React and databases.</p>
 
-      {/* Add more project divs as needed */}
+          </div>
+          <div className="pl">
+            <h2>Programing Languages</h2>
+            <p>Projects built on popular programming languages.</p>
+
+
+          </div>
+          <div className="apps">
+            <h2>Apps</h2>
+            <p>App development using Xcode and Android Studio.</p>
+
+
+          </div>
+        </div>
     </div>
 
     {/* Contact Section */}
