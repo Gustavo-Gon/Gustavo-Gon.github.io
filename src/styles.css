@@ -73,61 +73,72 @@ body {
 }
 
 /* About Me Section */
-
 .about-me-section {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
     padding: 50px 20%;
     background-color: aliceblue;
-  }
-  
-  .profile-card {
-    display: flex;
-    align-items: center;
+}
+
+.profile-card, .tools-card {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
-    max-width: 700px;
-  }
-  
-  .profile-pic {
-    width: 1000px; /* Adjust size as needed */
+    margin: 10px;
+}
+
+.profile-card {
+    display: flex;
+    flex-basis: 60%; /* Adjust the size as needed */
+}
+
+.profile-pic {
+    width: 800px; /* Adjust size as needed */
     height: auto;
-    border-radius: 0; /* Adjust for non-circular image */
     overflow: hidden;
     margin-right: 30px;
-  }
-  
-  
-  .profile-pic img {
+}
+
+.profile-pic img {
     width: 100%;
     height: auto;
-  }
-  
-  .about-text {
+}
+
+.about-text {
     text-align: left;
     flex-grow: 1;
-  }
+}
+
+.tools-card {
+    flex-basis: 45%; /* Adjust the size as needed */
+    display: flex;
+    justify-content: space-around; /* Space out icons evenly */
+    align-items: center;
+}
+
+.icon {
+    width: 50px; /* Adjust icon size as needed */
+    height: auto;
+    padding: 5px;
+}
 
 /* Projects Section */
 .projects-section {
     padding: 20px 10%;
     background: linear-gradient(135deg, #333, #555);
-    /* You can adjust the angle and colors as needed */
-    color: white; /* Set text color to contrast the background */
-    padding: 20px; /* Adjust padding as needed */
-
+    color: white;
 }
-  
+
 .myPro {
     text-align: center;
 }
 
 .icons {
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    align-items: center;
+    justify-content: center;
 }
 
 .icons img {
@@ -136,22 +147,15 @@ body {
     margin-right: 10px;
 }
 
-.projects {
-    display: flex;
-    margin: 10px;
-    flex-basis: 30%;
-}
 .projects-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
+}
 
-.web,
-.pl,
-.apps {
+.web, .pl, .apps {
     text-align: center;
-    flex: 30%; /* Set each section to take up 30% of the container width */
+    flex: 30%;
     margin-top: 20px;
     background-color: #333;
     padding: 5px;
@@ -159,14 +163,12 @@ body {
     margin-right: 5px;
     border-radius: 15px;
     overflow: hidden;
-    max-height: 300px; /* Set the initial height */
-    transition: max-height 0.3s ease-in-out; /* Add a smooth transition */
+    max-height: 300px;
+    transition: max-height 0.3s ease-in-out;
 }
 
-.web.expanded,
-.pl.expanded,
-.apps.expanded {
-  max-height: 500px; /* Set the expanded height */
+.web.expanded, .pl.expanded, .apps.expanded {
+    max-height: 500px;
 }
 
 .face {
@@ -180,10 +182,6 @@ body {
     background-color: #ececec;
 }
 
-.social {
-    display: flex;
-}
-
 .social-icon {
     align-items: right; /* Center vertically */
     justify-content: center; /* Center horizontally */
@@ -192,42 +190,21 @@ body {
     padding: 10px;
 }
 
-
+/* Media Queries */
 @media (max-width: 992px) {
-    /* About Me Section */
-    .about-me-section, .profile-card {
+    .about-me-section, .profile-card, .tools-card {
         flex-direction: column;
         align-items: center;
         text-align: center;
-      }
-
-    /* Projects Section */
-    .project {
-        flex-direction: column;
+        flex-basis: 100%;
     }
 
     .profile-pic {
-        width: 80%; /* Adjust for mobile view */
+        width: 80%;
         margin-right: 0;
         margin-bottom: 20px;
-      }
-    
-
-    .project img, .project.project-reverse img {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 20px;
-        max-width: 100%;
     }
 
-    .project .project-details h3 {
-        font-size: 1.5em; 
-    }
-}
-
-/* Mobile */
-@media (max-width: 992px) {
-    /* Navbar Styles */
     .navbar {
         flex-direction: column;
         padding: 10px;
@@ -238,7 +215,6 @@ body {
         padding: 10px;
     }
 
-    /* Background Image Section */
     .bg-text h1 {
         font-size: 2.5em;
     }
@@ -247,28 +223,14 @@ body {
         font-size: 1.5em;
     }
 
-    /* Projects Section */
-    .project img, .project.project-reverse img {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    /* Contact Section */
-    .social-icon {
-        margin: 10px;
-    }
-
-    .about-me-section, .profile-card {
+    .projects-container {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        width: auto;
-      }
-    
-      .profile-pic {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
+    }
+
+    .project {
+        flex-basis: 100%;
+    }
 }
 
 /* Modal Styles */
@@ -318,21 +280,7 @@ body {
 }
 
 .project-video {
-    width: 100%;         /* Ensure the video takes the full width of its container */
-    max-width: 150px;    /* Limit the maximum width */
-
-    border-radius: 5px;  /* Optional: If you want rounded corners */
+    width: 100%;
+    max-width: 150px;
+    border-radius: 5px;
 }
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-    .projects-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .project {
-      flex-basis: 100%;
-    }
-  }
-  

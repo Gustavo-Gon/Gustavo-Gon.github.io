@@ -47,6 +47,18 @@ const Home = () => {
                 </p>
               </div>
             </div>
+            <div className="tools-card">
+            <div className="about-text">
+                <h2><i>More Than Just Code</i></h2>
+
+              </div>
+          <a href="https://lightroom.app.link/ENxumylNCFb" target="_blank" rel="noopener noreferrer">
+            <img src="/portfolio/images/lightroom.png" alt="Lightroom" className="icon" />
+          </a>
+          <a href="https://www.figma.com/@gustavogon" target="_blank" rel="noopener noreferrer">
+            <img src="/portfolio/images/figma.png" alt="Figma" className="icon" />
+          </a>
+        </div>
       </div>
 
       <div className="projects-section" id="projects">
