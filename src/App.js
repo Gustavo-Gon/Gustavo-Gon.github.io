@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   const toggleAppsSection = () => {
-    setAppsSectionExpanded(!appsSectionExpanded);
+    setAppsSectionExpanded(!appsSectionExpanded); 
   };
 
   return (
