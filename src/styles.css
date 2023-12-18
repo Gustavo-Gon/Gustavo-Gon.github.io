@@ -199,6 +199,10 @@ body {
         flex-basis: 100%;
     }
 
+    .profile-card, .tools-card {
+        width: 100%;
+    }
+
     .profile-pic {
         width: 80%;
         margin-right: 0;
@@ -206,7 +210,7 @@ body {
     }
 
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         padding: 10px;
         text-align: center;
     }
