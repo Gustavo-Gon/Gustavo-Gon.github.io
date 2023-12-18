@@ -97,7 +97,7 @@ const Home = () => {
         </div>
 
   
-      </div>
+      </div> 
 
       <div className="contact-section" id="contact">
 
