@@ -36,15 +36,17 @@ const Home = () => {
       </div>
 
       <div className="about-me-section" id="about-me">
-        <div className="profile-pic">
-          <img src="/portfolio/images/Gus1.jpg" alt="Your Name" />
-        </div>
-        <div className="about-text">
-          <h2>About Me</h2>
-          <p>
-            I'm a dedicated Computer Science student from Bellevue College with a passion for software and mobile application development. My academic journey is coupled with hands-on experience, having collaborated on Agile teams to create innovative Android/iOS applications. Beyond the classroom and development environment, I've honed my skills in customer-centric roles, blending technical expertise with effective communication. Always eager to embrace new challenges, I'm driven by a relentless pursuit of technological excellence and continuous learning.
-          </p>
-        </div>
+          <div className="profile-card">
+            <div className="profile-pic">
+              <img src="/portfolio/images/Gus1.jpg" alt="Your Name" />
+              </div>
+                <div className="about-text">
+                <h2>About Me</h2>
+                <p>
+                I'm a dedicated Computer Science student from Bellevue College with a passion for software and mobile application development. My academic journey is coupled with hands-on experience, having collaborated on Agile teams to create innovative Android/iOS applications. Beyond the classroom and development environment, I've honed my skills in customer-centric roles, blending technical expertise with effective communication. Always eager to embrace new challenges, I'm driven by a relentless pursuit of technological excellence and continuous learning.
+                </p>
+              </div>
+            </div>
       </div>
 
       <div className="projects-section" id="projects">
@@ -60,7 +62,7 @@ const Home = () => {
           <img src='/portfolio/images/php.png' alt='PHP'></img>
         </div>
 
-        <div className="projects">
+        <div className="projects-container" id="projects">
           <div className={`web ${webSectionExpanded ? 'expanded' : ''}`} id="web-section" onClick={toggleWebSection}>
             <h2>Web Frameworks</h2>
             {webSectionExpanded && (

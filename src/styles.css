@@ -73,27 +73,42 @@ body {
 }
 
 /* About Me Section */
+
 .about-me-section {
     display: flex;
-    align-items: center;
-    padding: 0 20%;
+    justify-content: center;
+    padding: 50px 20%;
     background-color: aliceblue;
-}
-
-.profile-pic {
-    flex-shrink: 0;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+  }
+  
+  .profile-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 700px;
+  }
+  
+  .profile-pic {
+    width: 1000px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 0; /* Adjust for non-circular image */
     overflow: hidden;
     margin-right: 30px;
-}
-
-.profile-pic img {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-}
+  }
+  
+  
+  .profile-pic img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .about-text {
+    text-align: left;
+    flex-grow: 1;
+  }
 
 /* Projects Section */
 .projects-section {
@@ -123,7 +138,14 @@ body {
 
 .projects {
     display: flex;
+    margin: 10px;
+    flex-basis: 30%;
 }
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 
 .web,
 .pl,
@@ -173,22 +195,23 @@ body {
 
 @media (max-width: 992px) {
     /* About Me Section */
-    .about-me-section {
+    .about-me-section, .profile-card {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 20px;
-    }
-
-    .profile-pic {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+      }
 
     /* Projects Section */
     .project {
         flex-direction: column;
     }
+
+    .profile-pic {
+        width: 80%; /* Adjust for mobile view */
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    
 
     .project img, .project.project-reverse img {
         margin-left: 0;
@@ -203,7 +226,7 @@ body {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     /* Navbar Styles */
     .navbar {
         flex-direction: column;
@@ -234,6 +257,17 @@ body {
     .social-icon {
         margin: 10px;
     }
+
+    .about-me-section, .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
 }
 
 /* Modal Styles */
@@ -288,3 +322,16 @@ body {
 
     border-radius: 5px;  /* Optional: If you want rounded corners */
 }
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .projects-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .project {
+      flex-basis: 100%;
+    }
+  }
+  
