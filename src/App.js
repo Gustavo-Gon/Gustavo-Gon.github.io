@@ -4,139 +4,112 @@ import './styles.css';
 const Home = () => {
 
   const [webSectionExpanded, setWebSectionExpanded] = useState(false);
-  const [plSectionExpanded, setPlSectionExpanded] = useState(false);
-  const [appsSectionExpanded, setAppsSectionExpanded] = useState(false);
+  const [appSectionExpanded, setAppSectionExpanded] = useState(false);
+  const [moreSectionExpanded, setMoreThanCodeExpand] = useState(false);
+
 
   const toggleWebSection = () => {
     setWebSectionExpanded(!webSectionExpanded);
   };
 
-  const togglePlSection = () => {
-    setPlSectionExpanded(!plSectionExpanded);
+  const toggleAppSection = () => {
+    setAppSectionExpanded(!appSectionExpanded); 
   };
 
-  const toggleAppsSection = () => {
-    setAppsSectionExpanded(!appsSectionExpanded); 
+  const toggleMoreSection = () => {
+    setMoreThanCodeExpand(!moreSectionExpanded); 
   };
+
 
   return (
     <div className="over">
-      <div className="large-bg" id="home">
-        <div className="bg-text">
-          <Header />
-        </div>
-        <img src="/portfolio/images/mountain.jpeg" alt="Background" />
-      </div>
+    <div className="header-bg">
+      <img src="/portfolio/images/mountain.jpeg" alt="Background" className="mountain-image" />
 
-      <div className="navbar">
-        <a href="#home">Home</a>
-        <a href="#about-me">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
+      <img src="/portfolio/images/Gus2.jpeg" alt="Your Name" className="profile-image" />
+    </div>
 
-      <div className="about-me-section" id="about-me">
-          <div className="profile-card">
-            <div className="profile-pic">
-              <img src="/portfolio/images/Gus1.jpg" alt="Your Name" />
-              </div>
-                <div className="about-text">
-                <h2>About Me</h2>
-                <p>
-                I'm a dedicated Computer Science student from Bellevue College with a passion for software and mobile application development. My academic journey is coupled with hands-on experience, having collaborated on Agile teams to create innovative Android/iOS applications. Beyond the classroom and development environment, I've honed my skills in customer-centric roles, blending technical expertise with effective communication. Always eager to embrace new challenges, I'm driven by a relentless pursuit of technological excellence and continuous learning.
-                </p>
-              </div>
-            </div>
-            <div className="tools-card">
-            <div className="about-text">
-                <h2><i>More Than Just Code</i></h2>
+    <div className="title">
+      <h1>Gustavo Gonzalez</h1>
+      <h3>Software Developer</h3>
 
-              </div>
-          <a href="https://lightroom.app.link/ENxumylNCFb" target="_blank" rel="noopener noreferrer">
-            <img src="/portfolio/images/lightroom.png" alt="Lightroom" className="icon" />
+        <div className="image-row">
+          <a href="https://github.com/Gustavo-Gon" target="_blank" rel="noopener noreferrer">
+            <img src="/portfolio/images/githublogo.png" alt="Github" className="icon-image" />
           </a>
-          <a href="https://www.figma.com/@gustavogon" target="_blank" rel="noopener noreferrer">
-            <img src="/portfolio/images/figma.png" alt="Figma" className="icon" />
+          <a href="https://www.linkedin.com/in/gustavo-gonzalez-218148296/" target="_blank" rel="noopener noreferrer">
+            <img src="/portfolio/images/inlogo.png" alt="LinkedIn" className="icon-image" />
+          </a>
+          <a href="mailto:gon.gustavo@outlook.com">
+            <img src="/portfolio/images/envelope.png" alt="Email" className="icon-image" />
           </a>
         </div>
-      </div>
 
-      <div className="projects-section" id="projects">
-        <h1 className="myPro">My Projects</h1>
-        <div className="icons">
-          <img src='/portfolio/images/c-.png' alt='C++'></img>
-          <img src='/portfolio/images/java.png' alt='Java'></img>
-          <img src='/portfolio/images/python.png' alt='Python'></img>
-          <img src='/portfolio/logo192.png' alt='React'></img>
-          <img src='/portfolio/images/css-3.png' alt='HTML'></img>
-          <img src='/portfolio/images/html-5.png' alt='CSS'></img>
-          <img src='/portfolio/images/js.png' alt='JavaScript'></img>
-          <img src='/portfolio/images/php.png' alt='PHP'></img>
-        </div>
 
-        <div className="projects-container" id="projects">
+    </div>
+
+
           <div className={`web ${webSectionExpanded ? 'expanded' : ''}`} id="web-section" onClick={toggleWebSection}>
             <h2>Web Frameworks</h2>
             {webSectionExpanded && (
               <>
-                <p>View my projects utilizing AWS, React, and databases. </p>
+                <h3>Full-Stack Development utilizing React and AWS</h3>
 
+                <div className="page-row">
+                  <a href="https://www.acaciaelectric.com" target="_blank" rel="noopener noreferrer">
+                    <img src="/portfolio/images/acacia.png" alt="Acacia" className="page-image" />
+                  </a>
+                  <a href="https://gustavo-gon.github.io/portfolio" target="_blank" rel="noopener noreferrer">
+                    <img src="/portfolio/images/portfolio.png" alt="Portfolio" className="page-image" />
+                  </a>
 
+                </div>
+  
               </>
               )}
           </div>
-          <div className={`pl ${plSectionExpanded ? 'expanded' : ''}`} id="pl-section" onClick={togglePlSection}>
-            <h2>Computer Vision</h2>
-            {plSectionExpanded && (
+
+
+          <div className={`web ${appSectionExpanded ? 'expanded' : ''}`} id="web-section" onClick={toggleAppSection}>
+            <h2>App Development</h2>
+            {appSectionExpanded && (
               <>
-                <p>Facial Recognition using C++ and openCV.</p>
-                <img src="/portfolio/images/FaceReg.png" alt="face" className="face" />
+                <h3>E-Commerces App in Development for Capstone </h3>
 
               </>
               )}
           </div>
-          <div className={`apps ${appsSectionExpanded ? 'expanded' : ''}`} id="apps-section" onClick={toggleAppsSection}>
-            <h2>App development</h2>
-            {appsSectionExpanded && (
+
+          <div className={`web ${moreSectionExpanded ? 'expanded' : ''}`} id="web-section" onClick={toggleMoreSection}>
+            <h2><i>More Than Just Code</i></h2>
+            {moreSectionExpanded && (
               <>
-                <p>App development using Xcode and Android Studio.</p>
-                <video src="/portfolio/images/AppVid.mp4" alt="app" className="project-video" autoPlay></video>
+                <h3>Prototyping to Development </h3>
+                <div className="image-row">
+                  <a href="https://www.figma.com/@gustavogon" target="_blank" rel="noopener noreferrer">
+                    <img src="/portfolio/images/figma.png" alt="Figma" className="icon-image" />
+                  </a>
+                  <a href="https://lightroom.adobe.com/u/gustavogonzalez68?_height=1080&_width=1920&_branch_match_id=1191568301653393751&_open_delay_ms=3000&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8lMzygpys%2FP1UssKNDLyczL1nf1qyjNrczxc3ZLso%2FPSAUpsDU0sDBQiy%2FPTCnJsDW0NDIAAOk5sy4%2FAAAA" target="_blank" rel="noopener noreferrer">
+                    <img src="/portfolio/images/lightroom.png" alt="Lightroom" className="icon-image" />
+                  </a>
+                </div>
 
-
+                <div className="prototyping-section">
+                  <iframe 
+                    style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} 
+                    width="100%" 
+                    height="400" 
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FElXmFJ6HqxbPr178QoaxAd%2FPortfolio%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-2%26viewport%3D38%252C364%252C0.49%26t%3D4L1YBvSmj1XFxIBE-1%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A2%26mode%3Ddesign" 
+                    allowFullScreen>
+                  </iframe>
+                </div>
               </>
               )}
           </div>
-        </div>
-
   
       </div> 
-
-      <div className="contact-section" id="contact">
-
-        <h2>Contact Me</h2>
-        <p>Feel free to get in touch with me through the following means:</p>
-        <div className="social-icons-container">
-          <a href="https://github.com/Gustavo-Gon" target="_blank" className="social-icon">
-          <img src="/portfolio/images/githublogo.png" alt='github' className='social-icon'></img>
-        </a>
-
-        <a href="https://www.linkedin.com/in/gustavo-gonzalez-218148296/" target="_blank" className="social-icon">
-        <img src="/portfolio/images/inlogo.png" alt='linkedin' className='social-icon'></img>
-        </a>
-      </div>
-
-      </div>
-
-
-    </div>
   );
 };
 
-const Header = () => (
-  <header>
-    <h1>Gustavo Gonzalez</h1>
-    <p>Software Engineer | Web/Mobile Developer</p>
-  </header>
-);
 
 export default Home;

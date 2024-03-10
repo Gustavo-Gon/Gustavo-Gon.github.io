@@ -1,290 +1,166 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
-
-/* Background Image Section */
-.large-bg {
+.header-bg {
     position: relative;
-    overflow: hidden;
-}
+    text-align: center;
+    height: 50vh; /* Adjust based on your preference */
+    overflow: hidden; /* Keeps the overflow content from extending the size of the container */
 
-.large-bg img {
+  }
+  
+  .mountain-image {
     width: 100%;
     height: auto;
-}
-
-.bg-text {
+  }
+  
+  .profile-image {
+    width: 250px; /* Adjust size as needed */
+    height: 250px; /* Adjust size as needed */
+    border-radius: 50%;
+    border: 5px solid #88bdbc; /* Optional */
+    object-fit: cover;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%; /* Center horizontally */
+    bottom: 0px; /* Half of the image's height to make it overlap */
+    transform: translateX(-50%); /* Center-align the image properly */
+    z-index: 10; /* Ensure it's above the mountain image */
+  }
+
+.title {
     text-align: center;
-    color: white;
-    z-index: 1;
-}
-
-.bg-text h1, .bg-text p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    word-wrap: break-word;
-    margin: 0;
-}
-
-.bg-text h1 {
-    font-size: 4em;
-    font-weight: bold;
-}
-
-.bg-text p {
-    font-size: 2em;
-    margin-top: 20px;
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-}
-
-.navbar a {
-    color: black;
-    text-decoration: none;
-    padding: 5px 15px;
-    transition: all 0.3s;
-    position: relative;
-}
-
-.navbar a:hover::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    height: 2px;
-    background-color: black;
-}
-
-/* About Me Section */
-.about-me-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
-    padding: 50px 20%;
-    background-color: aliceblue;
-}
-
-.profile-card, .tools-card {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 10px;
-}
-
-.profile-card {
-    display: flex;
-    flex-basis: 60%; /* Adjust the size as needed */
-}
-
-.profile-pic {
-    width: 800px; /* Adjust size as needed */
-    height: auto;
-    overflow: hidden;
-    margin-right: 30px;
-}
-
-.profile-pic img {
-    width: 100%;
-    height: auto;
-}
-
-.about-text {
-    text-align: left;
-    flex-grow: 1;
-}
-
-.tools-card {
-    flex-basis: 45%; /* Adjust the size as needed */
-    display: flex;
-    justify-content: space-around; /* Space out icons evenly */
-    align-items: center;
-}
-
-.icon {
-    width: 50px; /* Adjust icon size as needed */
-    height: auto;
-    padding: 5px;
-}
-
-/* Projects Section */
-.projects-section {
-    padding: 20px 10%;
-    background: linear-gradient(135deg, #333, #555);
-    color: white;
-}
-
-.myPro {
-    text-align: center;
-}
-
-.icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icons img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
-
-.projects-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.web, .pl, .apps {
-    text-align: center;
-    flex: 30%;
-    margin-top: 20px;
-    background-color: #333;
-    padding: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 15px;
-    overflow: hidden;
-    max-height: 300px;
-    transition: max-height 0.3s ease-in-out;
-}
-
-.web.expanded, .pl.expanded, .apps.expanded {
-    max-height: 500px;
-}
-
-.face {
-    height: 250px;
-    width: auto;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 20px 10%;
-    background-color: #ececec;
-}
-
-.social-icon {
-    align-items: right; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    height: 40px;
-    width: auto;
     padding: 10px;
 }
 
-/* Media Queries */
-@media (max-width: 992px) {
-    .about-me-section, .profile-card, .tools-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        flex-basis: 100%;
+.image-row {
+    display: flex; /* Use flexbox to layout images horizontally */
+    justify-content: center; /* Center the images horizontally */
+    gap: 20px; /* Add some space between the images */
+    margin-top: 20px; /* Add some space above the image row */
+  }
+  
+  .icon-image {
+    width: auto; /* Set a fixed width for each image */
+    height: 45px; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the images cover the area without distortion */
+    padding-inline: 5px;
+  }
+
+  .page-image {
+    width: 50%;
+    height: auto;
+  }
+
+  .page-row {
+    display: flex; /* Use flexbox to layout images horizontally */
+    justify-content: center; /* Center the images horizontally */
+    gap: 5px; /* Add some space between the images */
+    margin-top: 20px; /* Add some space above the image row */
+  }
+  
+/* Updated styles for the web container */
+.web {
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically in the container */
+  align-items: center; /* Center horizontally in the container */
+  transition: all 0.3s ease-in-out; /* Smooth transition for expansion */
+  cursor: pointer; /* Indicates the element is clickable */
+  margin: 20px; /* Spacing around the container */
+  padding: 20px; /* Padding inside the container */
+  background-color: #f0f0f0; /* Light background color */
+  border-radius: 5px; /* Slight rounding of corners */
+  box-shadow: none; /* No shadow in initial state */
+  height: 50px; /* Initial height to look like a long rectangle */
+  overflow: hidden; /* Hide content that exceeds the container size */
+  text-align: center; /* Center text horizontally */
+}
+
+/* Retain the expanded state styles */
+.web.expanded {
+  height: auto; /* Expand to fit content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Adjust styles for content inside to ensure they also align well */
+.web p, .web ul, .web h2 {
+  width: 100%; /* Ensure full width for center alignment */
+  text-align: center; /* Center text horizontally */
+}
+
+/* For lists, if needed, to ensure items are also centered */
+.web ul {
+  display: flex; /* Use Flexbox for the list */
+  flex-direction: column; /* Stack list items vertically */
+  align-items: center; /* Center list items horizontally */
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.web ul li {
+  padding: 5px 0; /* Space between list items */
+}
+
+body {
+    background-image: linear-gradient(to bottom, #88bdbc 35%, #f8eed8 80%);
+    background-attachment: fixed; /* Keep the background fixed during scroll */
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover the entire page */
+  }
+  
+
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .profile-image {
+      width: 120px; /* Smaller size for mobile */
+      height: 120px; /* Smaller size for mobile */
+      border: 10px solid #88bdbc; /* Adjust border size for smaller image */
+      bottom: -1px; /* Adjust overlap */
     }
 
-    .profile-card, .tools-card {
+    .mountain-image {
         width: 100%;
+        height: 80%;
     }
- 
-    .profile-pic {
-        width: 80%;
-        margin-right: 0;
-        margin-bottom: 20px;
+  
+    .title {
+      padding: 5px;
     }
-
-    .navbar {
-        flex-direction: row;
-        padding: 10px;
-        text-align: center;
+  
+    .image-row {
+      gap: 10px; /* Less space between images */
+      margin-top: 10px; /* Less space above the image row */
     }
 
-    .navbar a {
-        padding: 10px;
+    .page-row {
+        gap: 10px; /* Less space between images */
+        margin-top: 10px; /* Less space above the image row */
+      }
+    
+    .icon-image {
+      height: 30px; /* Smaller icons */
+    }
+  
+    .web {
+      margin: 10px; /* Smaller margins */
+      padding: 10px; /* Smaller padding */
+      height: auto; /* Adjust height for better readability */
+      flex-direction: column; /* Ensure vertical layout */
+    }
+  
+    .web p, .web ul, .web h2 {
+      text-align: center; /* Ensure text is centered */
+    }
+  
+    .web ul {
+      flex-direction: column; /* Stack list items vertically */
+    }
+  
+    /* Additional adjustments for better mobile experience */
+    .header-bg {
+      height: 30vh; /* Adjust header image height for mobile */
     }
 
-    .bg-text h1 {
-        font-size: 2.5em;
-    }
-
-    .bg-text p {
-        font-size: 1.5em;
-    }
-
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project {
-        flex-basis: 100%;
-    }
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-    position: relative;
-    margin: 15% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 800px;
-    background-color: #f4f4f4;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #000;
-}
-
-.download-link {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid #333;
-    border-radius: 4px;
-}
-
-.project-video {
-    width: 100%;
-    max-width: 150px;
-    border-radius: 5px;
-}
+    .prototyping-section iframe {
+        display: none;
+      }
+  
+  }
