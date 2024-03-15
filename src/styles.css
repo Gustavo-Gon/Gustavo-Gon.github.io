@@ -43,14 +43,34 @@
     padding-inline: 5px;
   }
 
-  .page-image {
+  .page-image1 {
     width: 50%;
+    height: auto;
+  }
+
+  .page-image2 {
+    width: 50%;
+    height: 20%;
+    margin: 15px;
+  }
+
+  .page-image3 {
+    width: 100%;
     height: auto;
   }
 
   .page-row {
     display: flex; /* Use flexbox to layout images horizontally */
     justify-content: center; /* Center the images horizontally */
+    flex-direction: column;
+    gap: 5px; /* Add some space between the images */
+    margin-top: 20px; /* Add some space above the image row */
+  }
+
+  .page-row1 {
+    display: flex; /* Use flexbox to layout images horizontally */
+    justify-content: center; /* Center the images horizontally */
+
     gap: 5px; /* Add some space between the images */
     margin-top: 20px; /* Add some space above the image row */
   }
@@ -133,7 +153,8 @@ body {
     .page-row {
         gap: 10px; /* Less space between images */
         margin-top: 10px; /* Less space above the image row */
-      }
+      }    
+
     
     .icon-image {
       height: 30px; /* Smaller icons */

@@ -57,10 +57,10 @@ const Home = () => {
 
                 <div className="page-row">
                   <a href="https://www.acaciaelectric.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/portfolio/images/acacia.png" alt="Acacia" className="page-image" />
+                    <img src="/portfolio/images/acacia.png" alt="Acacia" className="page-image1" />
                   </a>
                   <a href="https://gustavo-gon.github.io/portfolio" target="_blank" rel="noopener noreferrer">
-                    <img src="/portfolio/images/portfolio.png" alt="Portfolio" className="page-image" />
+                    <img src="/portfolio/images/portfolio.png" alt="Portfolio" className="page-image2" />
                   </a>
 
                 </div>
@@ -74,8 +74,14 @@ const Home = () => {
             <h2>App Development</h2>
             {appSectionExpanded && (
               <>
-                <h3>E-Commerces App in Development for Capstone </h3>
+                <h3>E-Commerces App in Development via Android Studio for Capstone </h3>
 
+                <h3>Mock Social Media App Developed with SwiftUI</h3>
+
+
+                    <div className="page-row1">
+                      <img src="/portfolio/images/socialApp.png" alt="Social App" className="page-image3" />
+                    </div>
               </>
               )}
           </div>
