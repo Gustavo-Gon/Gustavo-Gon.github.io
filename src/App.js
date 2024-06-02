@@ -5,7 +5,10 @@ const Home = () => {
 
   const [webSectionExpanded, setWebSectionExpanded] = useState(false);
   const [appSectionExpanded, setAppSectionExpanded] = useState(false);
+  const [cyberSectionExpanded, setCyberSectionExpanded] = useState(false);
+  const [boardSectionExpanded, setBoardSectionExpanded] = useState(false);
   const [moreSectionExpanded, setMoreThanCodeExpand] = useState(false);
+ 
 
 
   const toggleWebSection = () => {
@@ -14,6 +17,14 @@ const Home = () => {
 
   const toggleAppSection = () => {
     setAppSectionExpanded(!appSectionExpanded); 
+  };
+
+  const toggleCyberSection = () => {
+    setCyberSectionExpanded(!cyberSectionExpanded);
+  };
+
+  const toggleBoardSection = () => {
+    setBoardSectionExpanded(!boardSectionExpanded);
   };
 
   const toggleMoreSection = () => {
@@ -53,13 +64,20 @@ const Home = () => {
             <h2>Web Frameworks</h2>
             {webSectionExpanded && (
               <>
-                <h3>Full-Stack Development utilizing React and AWS</h3>
 
                 <div className="page-row">
+                  <h3 className='cap'>Full Stack Development utilizing React and AWS</h3>
                   <a href="https://www.acaciaelectric.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/portfolio/images/acacia.png" alt="Acacia" className="page-image1" />
+                    <img src="/portfolio/images/acacia-site.png" alt="Acacia" className="page-image1" />
                   </a>
-                  <a href="https://gustavo-gon.github.io/portfolio" target="_blank" rel="noopener noreferrer">
+                  
+                  <h3 className='cap'>MERN Stack as a hiking social media site</h3>
+                  <a href="https://github.com/Gustavo-Gon/MERN_Project" target="_blank" rel="noopener noreferrer">
+                    <img src="/portfolio/images/trailblazers.png" alt="MERN" className="page-image1" />
+                  </a>
+
+                  <h3 className='cap'>Static React App hosted on Github Pages</h3>
+                  <a href="https://github.com/Gustavo-Gon/portfolio" target="_blank" rel="noopener noreferrer">
                     <img src="/portfolio/images/portfolio.png" alt="Portfolio" className="page-image2" />
                   </a>
 
@@ -74,17 +92,46 @@ const Home = () => {
             <h2>App Development</h2>
             {appSectionExpanded && (
               <>
-                <h3>E-Commerces App in Development via Android Studio for Capstone </h3>
 
-                <h3>Mock Social Media App Developed with SwiftUI</h3>
-
-
+                    <h3 className='cap'>Mock Social Media App Developed with SwiftUI</h3>
                     <div className="page-row1">
                       <img src="/portfolio/images/socialApp.png" alt="Social App" className="page-image3" />
+                    </div>
+
+                    <h3 className='cap'>Native Android E-Commerce App for Capstone Project </h3>
+                    <div className="page-row1">
+                      <img src="/portfolio/images/returnpal.png" alt="Service App" className="page-image3" />
                     </div>
               </>
               )}
           </div>
+
+        {/*
+          <div className={`web ${cyberSectionExpanded ? 'expand' : ''}`} id="web-selection" onClick={toggleCyberSection}>
+            <h2>Cyber Security & Network</h2>
+            {cyberSectionExpanded && (
+              <>
+                <h3>SQL Injection</h3>
+
+                <h3>Network Monitoring</h3>
+              
+              
+              </>
+            )}
+          </div>
+          
+
+          <div className={`web ${boardSectionExpanded ? 'expand' : ''}`} id="web-selection" onClick={toggleBoardSection}>
+            <h2>Raspberry Pi & Arduino</h2>
+            {boardSectionExpanded && (
+              <>
+              
+              
+              </>
+            )}
+          </div>
+
+          */}
 
           <div className={`web ${moreSectionExpanded ? 'expanded' : ''}`} id="web-section" onClick={toggleMoreSection}>
             <h2><i>More Than Just Code</i></h2>
