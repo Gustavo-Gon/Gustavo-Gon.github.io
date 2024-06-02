@@ -131,7 +131,7 @@ const Home = () => {
             )}
           </div>
 
-          */}
+             */}
 
           <div className={`web ${moreSectionExpanded ? 'expanded' : ''}`} id="web-section" onClick={toggleMoreSection}>
             <h2><i>More Than Just Code</i></h2>
