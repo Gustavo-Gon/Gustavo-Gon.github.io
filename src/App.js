@@ -82,7 +82,7 @@ const Home = () => {
                     <img src="/portfolio/images/portfolio.png" alt="Portfolio" className="page-image2" />
                   </a>
 
-                </div>
+                </div>  
   
               </>
               )}
