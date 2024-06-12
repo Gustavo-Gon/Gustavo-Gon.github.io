@@ -71,8 +71,9 @@ const Home = () => {
                     <img src="/portfolio/images/acacia-site.png" alt="Acacia" className="page-image1" />
                   </a>
                   
-                  <h3 className='cap'>MERN Stack as a hiking social media site</h3>
-                  <a href="https://github.com/Gustavo-Gon/MERN_Project" target="_blank" rel="noopener noreferrer">
+                  <h3 className='cap'>MERN Stack Web App hosted on FireBase</h3>
+                  <h6>***Local Backend Server Only At The Moment***</h6>
+                  <a href="https://trailblazers-b46b2.web.app" target="_blank" rel="noopener noreferrer">
                     <img src="/portfolio/images/trailblazers.png" alt="MERN" className="page-image1" />
                   </a>
 
